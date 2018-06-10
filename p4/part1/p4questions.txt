@@ -1,0 +1,83 @@
+Name:
+Section:
+
+Do not remove the questions from this file.
+Please write and indent your answers in this file.
+
+For all cache simulations, use a capacity of 16384 bytes, and set associativity of 1, for both 
+the I-cache and the D-cache.
+
+Sample command line:
+pin-fw/pin -injection child -t pin-fw/source/tools/Memory/obj-ia32/allcache.so -is 16384 -ia 1 -ib 64 -ds 16384 -da 1 -db <block-size> -- <yourexe>
+
+-------
+cache1D
+-------
+
+1.1 What do you get from running pin with a block size of 4 bytes?
+
+	Data cache misses:
+	Data cache references:
+
+1.2 Calculate the hit ratio for the D-cache with a block size of 4 bytes?
+	
+
+2.1 What do you get from running pin with a block size of 32 bytes?
+
+	Data cache misses:
+	Data cache references:
+
+2.2 Calculate the hit ratio for the D-cache with a block size of 32 bytes?
+
+
+3.1 What do you get from running pin with a block size of 64 bytes?
+
+	Data cache misses:
+	Data cache references:
+
+3.2 Calculate the hit ratio for the D-cache with a block size of 64 bytes?
+
+
+4. For this question, assume that the 100,000 element integer array that you allocated starts at address 0x50000000 in memory, the size of an integer is 4 bytes and the D-cache is initially empty. As you read the integers in the array one-by-one, starting at index 0, how many D-cache misses will you see for reading the first 40 integers when the cache block size is (to be answered without running pin):
+
+a) 4 bytes:
+	
+b) 32 bytes:
+	
+c) 64 bytes:
+	
+5. For this program, which block size is best? Why? What is the relationship between the blocksize and hit ratio? Why?
+
+-----------
+cache2Drows
+-----------
+
+6.1 What do you get from running pin with a block size of 64 bytes?
+
+	Data cache misses:
+	Data cache references:
+
+6.2 Calculate the hit ratio for the D-cache with a block size of 64 bytes?
+
+-----------
+cache2Dcols
+-----------
+
+7.1 What do you get from running pin with a block size of 64 bytes?
+	
+	Data cache misses:
+	Data cache references:
+
+7.2 Calculate the hit ratio for the D-cache with a block size of 64 bytes?
+
+--------------------------------------
+Comparing cache2Drows with cache2Dcols
+--------------------------------------
+
+8. For this question, assume that the 2-D integer array you allocated starts at address 0x40000000 in memory, the size of an integer is 4 bytes, D-cache block size is 64 bytes and the D-cache is initially empty. As you read the integers in the 2-D array one-by-one, starting with element array[0,0], how many D-cache misses will you see for reading the first 10 integers in case of (to be answered without running pin):
+
+a) cache2Drows:
+
+b) cache2Dcols:
+
+9. Compare the performance (hit ratio) of the D-cache for the 2 programs. Briefly explain what you observe.
